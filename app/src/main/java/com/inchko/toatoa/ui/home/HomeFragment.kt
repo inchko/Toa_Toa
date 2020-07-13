@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ListAdapter
+import android.widget.SearchView
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
@@ -14,6 +15,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.inchko.toatoa.Data.Stores
 import com.inchko.toatoa.R
 import com.inchko.toatoa.ui.home.Stores.StoreAdapter
+import kotlinx.android.synthetic.main.app_bar_main.*
 import kotlinx.android.synthetic.main.fragment_home.*
 
 class HomeFragment : Fragment() {
@@ -123,6 +125,16 @@ class HomeFragment : Fragment() {
                 view.findNavController().navigate(R.id.action_nav_home_to_store_info)
             };
 
+            storeSearch.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
+                override fun onQueryTextSubmit(query: String?): Boolean {
+                    return false
+                }
+
+                override fun onQueryTextChange(newText: String?): Boolean {
+                    (adapter as StoreAdapter).filter.filter(newText)
+                    return false
+                }
+            })
         }
     }
 }

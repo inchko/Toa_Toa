@@ -25,33 +25,63 @@
             android:layout_height="match_parent">
 
             <TextView
+                android:id="@+id/backgroundTop"
+                android:layout_width="403dp"
+                android:layout_height="31dp"
+                android:background="#0E0C0C"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/BackgroundSide"
+                android:layout_width="39dp"
+                android:layout_height="100dp"
+                android:background="#151313"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="59dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_launcher_background" />
+
+            <TextView
                 android:id="@+id/Title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
-                android:layout_marginBottom="8dp"
+                android:layout_marginBottom="16dp"
                 android:fontFamily="@font/belgrano"
+                android:textColor="#DDD7D7"
                 app:layout_constraintBottom_toTopOf="@+id/Description"
                 app:layout_constraintStart_toEndOf="@+id/imageView2"
                 app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0"
                 tools:text="title" />
 
             <TextView
                 android:id="@+id/Category"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="12dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginStart="156dp"
+                android:layout_marginTop="28dp"
                 android:textStyle="italic"
-                app:layout_constraintStart_toEndOf="@+id/Title"
+                app:layout_constraintStart_toEndOf="@+id/imageView2"
                 app:layout_constraintTop_toTopOf="parent"
                 tools:text="Category" />
 
             <TextView
                 android:id="@+id/Description"
-                android:layout_width="304dp"
-                android:layout_height="49dp"
+                android:layout_width="298dp"
+                android:layout_height="36dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginBottom="8dp"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -60,21 +90,11 @@
                 app:layout_constraintStart_toEndOf="@+id/imageView2"
                 tools:text="Description" />
 
-            <ImageView
-                android:id="@+id/imageView2"
-                android:layout_width="72dp"
-                android:layout_height="82dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/ic_menu_camera" />
-
             <TextView
                 android:id="@+id/City"
                 android:layout_width="wrap_content"
                 android:layout_height="20dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="28dp"
                 android:layout_marginEnd="16dp"
                 android:textStyle="italic"
                 app:layout_constraintEnd_toEndOf="parent"

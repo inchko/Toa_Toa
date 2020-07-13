@@ -6,15 +6,30 @@
     android:layout_height="match_parent"
     tools:context=".ui.home.HomeFragment">
 
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardViewSearch"
+        android:layout_width="406dp"
+        android:layout_height="76dp"
+        app:cardBackgroundColor="#FFFFF1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <SearchView
+            android:id="@+id/storeSearch"
+            android:layout_width="match_parent"
+            android:layout_height="71dp" />
+    </androidx.cardview.widget.CardView>
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/storesRV"
-        android:layout_width="407dp"
-        android:layout_height="726dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="396dp"
+        android:layout_height="710dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.482"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.843" />
+        app:layout_constraintTop_toBottomOf="@+id/cardViewSearch">
+
+    </androidx.recyclerview.widget.RecyclerView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
