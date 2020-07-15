@@ -5,12 +5,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
-import android.widget.Toast
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.inchko.toatoa.Data.Stores
 import com.inchko.toatoa.R
-import java.security.AccessController.getContext
 
 class StoreHolder(inflater: LayoutInflater, parent: ViewGroup, v: View) : RecyclerView.ViewHolder(
     inflater.inflate(
@@ -35,7 +33,7 @@ class StoreHolder(inflater: LayoutInflater, parent: ViewGroup, v: View) : Recycl
         titleView?.text = store.title
         cityView?.text = store.City
         descView?.text = store.Description
-        catView?.text = store.categoria
+        catView?.text = store.Categoria
 
     }
 

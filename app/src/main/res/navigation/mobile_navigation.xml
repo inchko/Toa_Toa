@@ -35,7 +35,7 @@
         tools:layout="@layout/fragment_slideshow" />
     <activity
         android:id="@+id/store_info"
-        android:name="com.inchko.toatoa.store_info"
+        android:name="com.inchko.toatoa.ui.storeView.store_info"
         android:label="content_scrolling"
         tools:layout="@layout/content_scrolling" >
         <argument
