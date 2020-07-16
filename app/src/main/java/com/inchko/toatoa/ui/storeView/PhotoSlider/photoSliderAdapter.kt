@@ -1,14 +1,17 @@
 package com.inchko.toatoa.ui.storeView.PhotoSlider
 
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
+import androidx.core.content.ContextCompat.startActivity
 import com.bumptech.glide.Glide
 import com.inchko.toatoa.R
+import com.inchko.toatoa.ui.storeView.store_info
 import com.smarteist.autoimageslider.SliderViewAdapter
 import java.net.URL
 
@@ -50,6 +53,10 @@ class photoSliderAdapter(context: Context) :
         viewHolder.itemView.setOnClickListener {
             Toast.makeText(context, "This is item in position $position", Toast.LENGTH_SHORT)
                 .show()
+            val intent = Intent(context, photoSliderBigActivity::class.java).apply {
+                putExtra("url", sliderItem)
+            }
+            startActivity(context,intent,null)
         }
     }
 

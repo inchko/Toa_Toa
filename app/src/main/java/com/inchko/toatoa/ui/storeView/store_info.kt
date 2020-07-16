@@ -2,6 +2,7 @@ package com.inchko.toatoa.ui.storeView
 
 import android.graphics.Color
 import android.os.Bundle
+import android.widget.Button
 import android.widget.RatingBar
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
@@ -10,9 +11,9 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.snackbar.Snackbar
 import com.inchko.toatoa.R
 import com.inchko.toatoa.ui.storeView.PhotoSlider.photoSliderAdapter
+import com.r0adkll.slidr.Slidr
 import com.smarteist.autoimageslider.SliderAnimations
 import com.smarteist.autoimageslider.SliderView
-import java.net.URL
 
 
 class store_info : AppCompatActivity() {
@@ -36,6 +37,10 @@ class store_info : AppCompatActivity() {
         findViewById<TextView>(R.id.storeCity).text = intent.getStringExtra("city")
         findViewById<RatingBar>(R.id.storeRating).rating = intent.getFloatExtra("rating", 0f)
 
+        findViewById<Button>(R.id.ASIback).setOnClickListener {
+            finish()
+        }
+
         val sliderView = findViewById<SliderView>(R.id.storePhotoSlider)
 
         val adapter = photoSliderAdapter(this)
@@ -49,5 +54,12 @@ class store_info : AppCompatActivity() {
         sliderView.scrollTimeInSec = 4 //set scroll delay in seconds :
         sliderView.startAutoCycle()
 
+        Slidr.attach(this)
+
     }
+    override fun finish(){
+        super.finish()
+        overridePendingTransition(R.anim.slide_in_left,R.anim.slide_out_right)
+    }
+
 }

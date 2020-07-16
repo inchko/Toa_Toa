@@ -37,9 +37,10 @@ class StoreHolder(inflater: LayoutInflater, parent: ViewGroup, v: View) : Recycl
 
     }
 
+
     override fun onClick(p0: View?) {
         Log.d("RecyclerView", "CLICK!")
-        p0?.findNavController()?.navigate(R.id.action_nav_home_to_store_info)
+      //  p0?.findNavController()?.navigate(R.id.action_nav_home_to_store_info)
     }
 
 }

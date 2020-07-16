@@ -10,16 +10,13 @@
         android:name="com.inchko.toatoa.ui.home.HomeFragment"
         android:label="@string/menu_home"
         tools:layout="@layout/fragment_home" >
-        <action
-            android:id="@+id/action_nav_home_to_store_info"
-            app:destination="@id/store_info"
-            app:enterAnim="@android:anim/fade_in"
-            app:exitAnim="@android:anim/fade_out"
-            app:popUpTo="@id/store_info" />
         <argument
             android:name="title"
             app:argType="string"
             android:defaultValue="title" />
+        <action
+            android:id="@+id/action_nav_home_to_store_info"
+            app:destination="@id/store_info" />
     </fragment>
 
     <fragment

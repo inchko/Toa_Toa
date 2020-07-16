@@ -11,10 +11,9 @@ import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.inchko.toatoa.Data.Stores
 import com.inchko.toatoa.R
-import com.inchko.toatoa.ui.storeView.store_info
 import com.inchko.toatoa.ui.home.Stores.StoreAdapter
+import com.inchko.toatoa.ui.storeView.store_info
 import kotlinx.android.synthetic.main.fragment_home.*
-import java.net.URL
 
 class HomeFragment : Fragment() {
 
@@ -99,10 +98,10 @@ class HomeFragment : Fragment() {
                     putExtra("Photos", it.photos)
                 }
                 startActivity(intent)
+                activity?.overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left)
 
                 // view.findNavController().navigate(R.id.action_nav_home_to_store_info)
             };
-
             storeSearch.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
                 override fun onQueryTextSubmit(query: String?): Boolean {
                     return false
